@@ -33,8 +33,8 @@ public class CollectionsApp {
                             System.out.println("1 -- Display all words to the console");
                             System.out.println("2 -- Display all plural words capitalized");
                             System.out.println("3 -- Display all words in reverse order");
-                            System.out.println("4 -- Display words that aren't plural");
-                            System.out.println("5 -- Add stars between your words");
+                            // System.out.println("4 -- Display words that aren't plural");
+                            // System.out.println("5 -- Add stars between your words");
                         }
                     }
                     int userFilterOption = input.nextInt();
@@ -53,6 +53,18 @@ public class CollectionsApp {
                     arrayList.isPrintUserIntArrayChoice(100);
                     System.out.println("Here is an array list of 100 random numbers: ");
                     System.out.println(arrayList.getUserIntArray());
+                    System.out.println("Please enter:");
+                    System.out.println("1 -- Display an average of all numbers");
+                    System.out.println("2 -- Display the highest and lowest numbers");
+                    System.out.println("3 -- Display only the odd numbers");
+                    int userIntDisplayOption = input.nextInt();
+                    if (userIntDisplayOption == 1) {
+                        arrayList.calculateAverageOfIntArray();
+                    } else if (userIntDisplayOption == 2) {
+                        arrayList.HighestAndLowestNumOnly();
+                    } else if (userIntDisplayOption == 3) {
+                        arrayList.PrintOddsOnly();
+                    }
                 }
             } else if (userInput == 2) {
                 isValidInput = true;
@@ -94,7 +106,7 @@ public class CollectionsApp {
 
         } while (!isValidInput);
 
-        System.out.println("Exit Time");
+        System.out.println("Program completed");
         input.close();
     }
 }

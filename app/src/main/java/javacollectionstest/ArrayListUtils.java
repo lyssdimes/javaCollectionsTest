@@ -36,6 +36,40 @@ public class ArrayListUtils {
         }
     }
 
+    public void calculateAverageOfIntArray() {
+        int sum = 0;
+        for (int number : userIntArray) {
+            sum += number;
+        }
+        double average = (double) sum / userIntArray.size();
+        System.out.println("Average: " + average);
+    }
+
+    public void HighestAndLowestNumOnly() {
+        int highest = userIntArray.get(0);
+        int lowest = userIntArray.get(0);
+
+        for (int number : userIntArray) {
+            if (number > highest) {
+                highest = number;
+            }
+            if (number < lowest) {
+                lowest = number;
+            }
+        }
+
+        System.out.println("Highest # is: " + highest);
+        System.out.println("Lowest # is: " + lowest);
+    }
+
+    public void PrintOddsOnly() {
+        for(int number: userIntArray){
+            if(number % 2 != 0){
+                System.out.println("Odd #: " + number);
+            }
+        }
+    }
+
     public void printList() {
         int animalListSelected = userStringArray.size();
         for (int i = 0; i < animalListSelected; i++) {
@@ -55,9 +89,9 @@ public class ArrayListUtils {
         }
     }
 
-    public void printInReverse(int chosenArraySize){
+    public void printInReverse(int chosenArraySize) {
         int startIndex = userStringArray.size() - chosenArraySize;
-        for (int i = userStringArray.size() - 1; i>= startIndex; i--){
+        for (int i = userStringArray.size() - 1; i >= startIndex; i--) {
             System.out.println(userStringArray.get(i));
         }
     }
